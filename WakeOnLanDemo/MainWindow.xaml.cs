@@ -30,7 +30,9 @@ namespace WakeOnLanDemo
             string macAddress = "EC:D6:8A:A6:4B:7B";
             SendWakeOnLan(ip, macAddress);
         }
-
+        //使用网络唤醒的前提条件：
+        //1. 被唤醒设备需要支持这WakeOnLine
+        //2. 接有线网络（不支持无线网卡，因为设备关机情况下无线网卡是断电的），另一端启动唤醒的设备需要与被唤醒设备处于同一局域网。
         private static void SendWakeOnLan(string ipAddress, string macAddress)
         {
             try
